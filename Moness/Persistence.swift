@@ -13,9 +13,22 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
+        
         for _ in 0..<10 {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
+        }
+        
+        for _ in 0..<10 {
+            let portfolioCompany = PortfolioCompany(context: viewContext)
+            portfolioCompany.symbol = "AAPL"
+            portfolioCompany.cik = "0000320193"
+            portfolioCompany.securityName = "Apple Inc"
+            portfolioCompany.securityType = "cs"
+            portfolioCompany.region = "US"
+            portfolioCompany.exchange = "XNAS"
+            portfolioCompany.sector = "Manufacturing"
+            portfolioCompany.currency = "USD"
         }
         do {
             try viewContext.save()
@@ -32,6 +45,8 @@ struct PersistenceController {
 
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "Moness")
+        container.viewContext.automaticallyMergesChangesFromParent = true
+        container.viewContext.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

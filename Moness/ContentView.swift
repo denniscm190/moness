@@ -8,8 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
+    private enum Tab {
+        case stats, portfolio, about
+    }
+    
+    @State private var tab: Tab = .stats
+    
+    @ViewBuilder var view: some View {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            NavigationView {
+                
+            }
+        } else {
+            TabView(selection: $tab) {
+                Text("Stats")
+                    .tabItem {
+                        Label("Stats", systemImage: "chart.bar.fill")
+                    }
+                    .tag(Tab.stats)
+
+                PortfolioView()
+                    .tabItem {
+                        Label("Portfolio", systemImage: "plus.circle.fill")
+                    }
+                    .tag(Tab.portfolio)
+                
+                Text("About")
+                    .tabItem {
+                        Label("About", systemImage: "info.circle.fill")
+                    }
+                    .tag(Tab.about)
+            }
+        }
+    }
+    
     var body: some View {
-        Text("Hello world")
+        view
     }
 }
 

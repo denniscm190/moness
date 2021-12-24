@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9562F74A2775BE1B00EEAB2F /* ConditionalWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F7492775BE1B00EEAB2F /* ConditionalWrapper.swift */; };
+		9562F74C2775BE3C00EEAB2F /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F74B2775BE3C00EEAB2F /* HttpRequest.swift */; };
+		9562F74E2775BFA600EEAB2F /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F74D2775BFA600EEAB2F /* StatsView.swift */; };
+		9562F7502775BFAC00EEAB2F /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F74F2775BFAC00EEAB2F /* PortfolioView.swift */; };
+		9562F7522775C2A000EEAB2F /* SearchCompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F7512775C2A000EEAB2F /* SearchCompanyModel.swift */; };
+		9562F7542775C32E00EEAB2F /* PortfolioRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F7532775C32E00EEAB2F /* PortfolioRow.swift */; };
+		9562F7562775CB4F00EEAB2F /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F7552775CB4F00EEAB2F /* QuoteModel.swift */; };
+		956FD3042775D55600D0E4DE /* SearchCompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956FD3032775D55600D0E4DE /* SearchCompanyList.swift */; };
+		956FD3062775D71300D0E4DE /* SearchCompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956FD3052775D71300D0E4DE /* SearchCompanyRow.swift */; };
+		956FD3082775E42900D0E4DE /* AddCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956FD3072775E42900D0E4DE /* AddCompany.swift */; };
+		956FD30A2775EC3F00D0E4DE /* CompanyDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956FD3092775EC3F00D0E4DE /* CompanyDetails.swift */; };
+		956FD30C2775EE8200D0E4DE /* CompanyDetailLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956FD30B2775EE8200D0E4DE /* CompanyDetailLabel.swift */; };
 		95EDE5B0276E229400C259A1 /* MonessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDE5AF276E229400C259A1 /* MonessApp.swift */; };
 		95EDE5B2276E229400C259A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDE5B1276E229400C259A1 /* ContentView.swift */; };
 		95EDE5B4276E229500C259A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95EDE5B3276E229500C259A1 /* Assets.xcassets */; };
@@ -17,6 +29,7 @@
 		95EDE5D0276E229500C259A1 /* MonessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDE5CF276E229500C259A1 /* MonessUITests.swift */; };
 		95EDE5D2276E229500C259A1 /* MonessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDE5D1276E229500C259A1 /* MonessUITestsLaunchTests.swift */; };
 		95EDE5E2276E23A300C259A1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95EDE5E1276E23A300C259A1 /* CloudKit.framework */; };
+		95FD80182776072300DBC635 /* FormatCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD80172776072300DBC635 /* FormatCurrency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +50,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9562F7492775BE1B00EEAB2F /* ConditionalWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalWrapper.swift; sourceTree = "<group>"; };
+		9562F74B2775BE3C00EEAB2F /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		9562F74D2775BFA600EEAB2F /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		9562F74F2775BFAC00EEAB2F /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
+		9562F7512775C2A000EEAB2F /* SearchCompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompanyModel.swift; sourceTree = "<group>"; };
+		9562F7532775C32E00EEAB2F /* PortfolioRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioRow.swift; sourceTree = "<group>"; };
+		9562F7552775CB4F00EEAB2F /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
+		956FD3032775D55600D0E4DE /* SearchCompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompanyList.swift; sourceTree = "<group>"; };
+		956FD3052775D71300D0E4DE /* SearchCompanyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompanyRow.swift; sourceTree = "<group>"; };
+		956FD3072775E42900D0E4DE /* AddCompany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCompany.swift; sourceTree = "<group>"; };
+		956FD3092775EC3F00D0E4DE /* CompanyDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetails.swift; sourceTree = "<group>"; };
+		956FD30B2775EE8200D0E4DE /* CompanyDetailLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailLabel.swift; sourceTree = "<group>"; };
 		95EDE5AC276E229400C259A1 /* Moness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EDE5AF276E229400C259A1 /* MonessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonessApp.swift; sourceTree = "<group>"; };
 		95EDE5B1276E229400C259A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +77,7 @@
 		95EDE5DE276E239700C259A1 /* Moness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Moness.entitlements; sourceTree = "<group>"; };
 		95EDE5DF276E239D00C259A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		95EDE5E1276E23A300C259A1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		95FD80172776072300DBC635 /* FormatCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatCurrency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +106,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9562F7462775BDEE00EEAB2F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9562F7532775C32E00EEAB2F /* PortfolioRow.swift */,
+				956FD3032775D55600D0E4DE /* SearchCompanyList.swift */,
+				956FD3052775D71300D0E4DE /* SearchCompanyRow.swift */,
+				956FD3072775E42900D0E4DE /* AddCompany.swift */,
+				956FD3092775EC3F00D0E4DE /* CompanyDetails.swift */,
+				956FD30B2775EE8200D0E4DE /* CompanyDetailLabel.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9562F7472775BDF400EEAB2F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9562F7512775C2A000EEAB2F /* SearchCompanyModel.swift */,
+				9562F7552775CB4F00EEAB2F /* QuoteModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9562F7482775BDFA00EEAB2F /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				9562F7492775BE1B00EEAB2F /* ConditionalWrapper.swift */,
+				9562F74B2775BE3C00EEAB2F /* HttpRequest.swift */,
+				95FD80172776072300DBC635 /* FormatCurrency.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
 		95EDE5A3276E229400C259A1 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +169,11 @@
 				95EDE5AF276E229400C259A1 /* MonessApp.swift */,
 				95EDE5B8276E229500C259A1 /* Persistence.swift */,
 				95EDE5B1276E229400C259A1 /* ContentView.swift */,
+				9562F74D2775BFA600EEAB2F /* StatsView.swift */,
+				9562F74F2775BFAC00EEAB2F /* PortfolioView.swift */,
+				9562F7462775BDEE00EEAB2F /* Helpers */,
+				9562F7472775BDF400EEAB2F /* Models */,
+				9562F7482775BDFA00EEAB2F /* Functions */,
 				95EDE5B5276E229500C259A1 /* Preview Content */,
 			);
 			path = Moness;
@@ -165,6 +228,8 @@
 			dependencies = (
 			);
 			name = Moness;
+			packageProductDependencies = (
+			);
 			productName = Moness;
 			productReference = 95EDE5AC276E229400C259A1 /* Moness.app */;
 			productType = "com.apple.product-type.application";
@@ -237,6 +302,8 @@
 				Base,
 			);
 			mainGroup = 95EDE5A3276E229400C259A1;
+			packageReferences = (
+			);
 			productRefGroup = 95EDE5AD276E229400C259A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,10 +346,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9562F7562775CB4F00EEAB2F /* QuoteModel.swift in Sources */,
 				95EDE5BC276E229500C259A1 /* Moness.xcdatamodeld in Sources */,
 				95EDE5B9276E229500C259A1 /* Persistence.swift in Sources */,
+				956FD3082775E42900D0E4DE /* AddCompany.swift in Sources */,
+				9562F74A2775BE1B00EEAB2F /* ConditionalWrapper.swift in Sources */,
 				95EDE5B2276E229400C259A1 /* ContentView.swift in Sources */,
+				956FD30A2775EC3F00D0E4DE /* CompanyDetails.swift in Sources */,
+				956FD3042775D55600D0E4DE /* SearchCompanyList.swift in Sources */,
+				9562F7522775C2A000EEAB2F /* SearchCompanyModel.swift in Sources */,
 				95EDE5B0276E229400C259A1 /* MonessApp.swift in Sources */,
+				9562F74E2775BFA600EEAB2F /* StatsView.swift in Sources */,
+				9562F74C2775BE3C00EEAB2F /* HttpRequest.swift in Sources */,
+				9562F7502775BFAC00EEAB2F /* PortfolioView.swift in Sources */,
+				956FD30C2775EE8200D0E4DE /* CompanyDetailLabel.swift in Sources */,
+				9562F7542775C32E00EEAB2F /* PortfolioRow.swift in Sources */,
+				956FD3062775D71300D0E4DE /* SearchCompanyRow.swift in Sources */,
+				95FD80182776072300DBC635 /* FormatCurrency.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
