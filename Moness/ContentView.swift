@@ -21,7 +21,7 @@ struct ContentView: View {
             }
         } else {
             TabView(selection: $tab) {
-                Text("Stats")
+                StatsView()
                     .tabItem {
                         Label("Stats", systemImage: "chart.bar.fill")
                     }

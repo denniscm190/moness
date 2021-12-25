@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PortfolioRow: View {
     var company: PortfolioCompany
-    @State private var quote = QuoteResult(latestPrice: 0, changePercent: 0)
+    @State private var quote = QuoteResult(latestPrice: 0, changePercent: 0, change: 0)
     @State private var timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -29,8 +29,9 @@ struct PortfolioRow: View {
                 
                 VStack(alignment: .trailing) {
                     HStack {
-                        Text("\(quote.changePercent*100, specifier: "%.2f")%")
-                        let closePrice = format(amount: quote.latestPrice, with: company.currency ?? "-")
+                        Text("\(formatToPercent(amount: quote.changePercent))")
+                        
+                        let closePrice = formatToCurrency(amount: quote.latestPrice, with: company.currency ?? "-")
                         Text("\(closePrice)")
                     }
                     .font(.headline)

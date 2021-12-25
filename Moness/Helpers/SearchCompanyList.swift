@@ -30,7 +30,7 @@ struct SearchCompanyList: View {
                     }
                 }
             }
-            .navigationTitle("Search company")
+            .navigationTitle("Search a company")
         }
     }
     

@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Network request
+// MARK: - HTTP REQUEST
 func httpRequest<T: Decodable>(url: String, model: T.Type, completion: @escaping (_ result: T) -> Void) {
     guard let url = URL(string: url) else {
         print("Invalid URL")

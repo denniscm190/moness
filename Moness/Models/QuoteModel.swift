@@ -11,7 +11,16 @@ struct QuoteResponse: Codable {
     var message: QuoteResult
 }
 
+struct QuoteBatchResponse: Codable {
+    var message: [String: QuoteBatchNestedResponse]
+}
+
+struct QuoteBatchNestedResponse: Codable {
+    var quote: QuoteResult
+}
+
 struct QuoteResult: Codable {
     var latestPrice: Float
-    var changePercent: Double
+    var changePercent: Float
+    var change: Float
 }

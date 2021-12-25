@@ -26,9 +26,9 @@ struct CompanyDetails: View {
             
             let amount = company.amount
             let purchasePrice =  company.purchasePrice
-            let formattedPurchasePrice = format(amount: purchasePrice, with: currencyCode)
+            let formattedPurchasePrice = formatToCurrency(amount: purchasePrice, with: currencyCode)
             let costValue = purchasePrice * amount
-            let formattedCostValue = format(amount: costValue, with: currencyCode)
+            let formattedCostValue = formatToCurrency(amount: costValue, with: currencyCode)
             Section {
                 CompanyDetailLabel(name: "Amount in portfolio", value: Text("\(amount, specifier: "%.4f")"))
                 CompanyDetailLabel(name: "Avg. purchase price", value: Text("\(formattedPurchasePrice)"))
@@ -36,8 +36,8 @@ struct CompanyDetails: View {
             }
             
             let marketValue = latestPrice * amount
-            let formattedMarketValue = format(amount: marketValue, with: currencyCode)
-            let profitLoss = format(amount: marketValue - costValue, with: currencyCode)
+            let formattedMarketValue = formatToCurrency(amount: marketValue, with: currencyCode)
+            let profitLoss = formatToCurrency(amount: marketValue - costValue, with: currencyCode)
             Section {
                 CompanyDetailLabel(name: "Latest price", value: Text("\(latestPrice, specifier: "%.2f")"))
                 CompanyDetailLabel(name: "Market value", value: Text("\(formattedMarketValue)"))

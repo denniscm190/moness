@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// Wrap view with some content given a condition
+// MARK: - CONDITIONAL WRAPPER
 extension View {
     @ViewBuilder
     func `if`<Content: View>(_ conditional: Bool, content: (Self) -> Content) -> some View {

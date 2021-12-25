@@ -19,10 +19,12 @@ struct AddCompany: View {
         Form {
             Section(header: Text("Add the purchase price")) {
                 TextField("Purchase price", value: $purchasePrice, format: .number)
+                    .keyboardType(.decimalPad)
             }
             
             Section(header: Text("Add the purchase amount")) {
                 TextField("Purchase amount", value: $amount, format: .number)
+                    .keyboardType(.decimalPad)
             }
         }
         .toolbar {

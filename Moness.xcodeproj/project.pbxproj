@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9562F74A2775BE1B00EEAB2F /* ConditionalWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F7492775BE1B00EEAB2F /* ConditionalWrapper.swift */; };
-		9562F74C2775BE3C00EEAB2F /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F74B2775BE3C00EEAB2F /* HttpRequest.swift */; };
+		953679A927762DE30078D65A /* StatPortfolioItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953679A827762DE30078D65A /* StatPortfolioItem.swift */; };
+		953679AB277630330078D65A /* StatAssetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953679AA277630330078D65A /* StatAssetItem.swift */; };
+		953679AD277640160078D65A /* PortfolioPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953679AC277640160078D65A /* PortfolioPlaceholder.swift */; };
+		953679AF277642320078D65A /* StatsPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953679AE277642320078D65A /* StatsPlaceholder.swift */; };
+		9545EE3E27772C25009BDFF5 /* FinancialCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9545EE3D27772C25009BDFF5 /* FinancialCalculations.swift */; };
+		9562F74A2775BE1B00EEAB2F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F7492775BE1B00EEAB2F /* Extensions.swift */; };
+		9562F74C2775BE3C00EEAB2F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F74B2775BE3C00EEAB2F /* Networking.swift */; };
 		9562F74E2775BFA600EEAB2F /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F74D2775BFA600EEAB2F /* StatsView.swift */; };
 		9562F7502775BFAC00EEAB2F /* PortfolioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F74F2775BFAC00EEAB2F /* PortfolioView.swift */; };
 		9562F7522775C2A000EEAB2F /* SearchCompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562F7512775C2A000EEAB2F /* SearchCompanyModel.swift */; };
@@ -29,7 +34,7 @@
 		95EDE5D0276E229500C259A1 /* MonessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDE5CF276E229500C259A1 /* MonessUITests.swift */; };
 		95EDE5D2276E229500C259A1 /* MonessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EDE5D1276E229500C259A1 /* MonessUITestsLaunchTests.swift */; };
 		95EDE5E2276E23A300C259A1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95EDE5E1276E23A300C259A1 /* CloudKit.framework */; };
-		95FD80182776072300DBC635 /* FormatCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD80172776072300DBC635 /* FormatCurrency.swift */; };
+		95FD80182776072300DBC635 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD80172776072300DBC635 /* Formatters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +55,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9562F7492775BE1B00EEAB2F /* ConditionalWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalWrapper.swift; sourceTree = "<group>"; };
-		9562F74B2775BE3C00EEAB2F /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		953679A827762DE30078D65A /* StatPortfolioItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatPortfolioItem.swift; sourceTree = "<group>"; };
+		953679AA277630330078D65A /* StatAssetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatAssetItem.swift; sourceTree = "<group>"; };
+		953679AC277640160078D65A /* PortfolioPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioPlaceholder.swift; sourceTree = "<group>"; };
+		953679AE277642320078D65A /* StatsPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsPlaceholder.swift; sourceTree = "<group>"; };
+		9545EE3D27772C25009BDFF5 /* FinancialCalculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialCalculations.swift; sourceTree = "<group>"; };
+		9562F7492775BE1B00EEAB2F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9562F74B2775BE3C00EEAB2F /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		9562F74D2775BFA600EEAB2F /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		9562F74F2775BFAC00EEAB2F /* PortfolioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioView.swift; sourceTree = "<group>"; };
 		9562F7512775C2A000EEAB2F /* SearchCompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCompanyModel.swift; sourceTree = "<group>"; };
@@ -77,7 +87,7 @@
 		95EDE5DE276E239700C259A1 /* Moness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Moness.entitlements; sourceTree = "<group>"; };
 		95EDE5DF276E239D00C259A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		95EDE5E1276E23A300C259A1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		95FD80172776072300DBC635 /* FormatCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatCurrency.swift; sourceTree = "<group>"; };
+		95FD80172776072300DBC635 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +120,15 @@
 			isa = PBXGroup;
 			children = (
 				9562F7532775C32E00EEAB2F /* PortfolioRow.swift */,
+				953679AC277640160078D65A /* PortfolioPlaceholder.swift */,
 				956FD3032775D55600D0E4DE /* SearchCompanyList.swift */,
 				956FD3052775D71300D0E4DE /* SearchCompanyRow.swift */,
 				956FD3072775E42900D0E4DE /* AddCompany.swift */,
 				956FD3092775EC3F00D0E4DE /* CompanyDetails.swift */,
 				956FD30B2775EE8200D0E4DE /* CompanyDetailLabel.swift */,
+				953679A827762DE30078D65A /* StatPortfolioItem.swift */,
+				953679AA277630330078D65A /* StatAssetItem.swift */,
+				953679AE277642320078D65A /* StatsPlaceholder.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -131,9 +145,10 @@
 		9562F7482775BDFA00EEAB2F /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				9562F7492775BE1B00EEAB2F /* ConditionalWrapper.swift */,
-				9562F74B2775BE3C00EEAB2F /* HttpRequest.swift */,
-				95FD80172776072300DBC635 /* FormatCurrency.swift */,
+				9562F7492775BE1B00EEAB2F /* Extensions.swift */,
+				9562F74B2775BE3C00EEAB2F /* Networking.swift */,
+				95FD80172776072300DBC635 /* Formatters.swift */,
+				9545EE3D27772C25009BDFF5 /* FinancialCalculations.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -350,19 +365,24 @@
 				95EDE5BC276E229500C259A1 /* Moness.xcdatamodeld in Sources */,
 				95EDE5B9276E229500C259A1 /* Persistence.swift in Sources */,
 				956FD3082775E42900D0E4DE /* AddCompany.swift in Sources */,
-				9562F74A2775BE1B00EEAB2F /* ConditionalWrapper.swift in Sources */,
+				953679A927762DE30078D65A /* StatPortfolioItem.swift in Sources */,
+				9562F74A2775BE1B00EEAB2F /* Extensions.swift in Sources */,
+				953679AB277630330078D65A /* StatAssetItem.swift in Sources */,
+				953679AF277642320078D65A /* StatsPlaceholder.swift in Sources */,
 				95EDE5B2276E229400C259A1 /* ContentView.swift in Sources */,
 				956FD30A2775EC3F00D0E4DE /* CompanyDetails.swift in Sources */,
 				956FD3042775D55600D0E4DE /* SearchCompanyList.swift in Sources */,
+				953679AD277640160078D65A /* PortfolioPlaceholder.swift in Sources */,
 				9562F7522775C2A000EEAB2F /* SearchCompanyModel.swift in Sources */,
 				95EDE5B0276E229400C259A1 /* MonessApp.swift in Sources */,
 				9562F74E2775BFA600EEAB2F /* StatsView.swift in Sources */,
-				9562F74C2775BE3C00EEAB2F /* HttpRequest.swift in Sources */,
+				9562F74C2775BE3C00EEAB2F /* Networking.swift in Sources */,
 				9562F7502775BFAC00EEAB2F /* PortfolioView.swift in Sources */,
+				9545EE3E27772C25009BDFF5 /* FinancialCalculations.swift in Sources */,
 				956FD30C2775EE8200D0E4DE /* CompanyDetailLabel.swift in Sources */,
 				9562F7542775C32E00EEAB2F /* PortfolioRow.swift in Sources */,
 				956FD3062775D71300D0E4DE /* SearchCompanyRow.swift in Sources */,
-				95FD80182776072300DBC635 /* FormatCurrency.swift in Sources */,
+				95FD80182776072300DBC635 /* Formatters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,11 +17,17 @@ struct PortfolioView: View {
     @State private var showAddCompanySheet = false
     
     var body: some View {
-        List {
-            ForEach(companies) { company in
-                PortfolioRow(company: company)
+        VStack {
+            if companies.isEmpty {
+                PortfolioPlaceholder()
+            } else {
+                List {
+                    ForEach(companies) { company in
+                        PortfolioRow(company: company)
+                    }
+                    .onDelete(perform: remove)
+                }
             }
-            .onDelete(perform: remove)
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
