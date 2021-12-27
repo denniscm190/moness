@@ -75,7 +75,7 @@ struct StatsView: View {
     private func getBatchQuote() {
         let symbols = companies.map { $0.symbol! }
         let symbolString = symbols.joined(separator: ",")
-        let url = "https://api.simoleon.app/stock/market/batch?symbols=\(symbolString)&types=quote"
+        let url = "https://api.moness.app/stock/market/batch?symbols=\(symbolString)&types=quote"
         httpRequest(url: url, model: QuoteBatchResponse.self) { response in
             for symbol in symbols {
                 let quote = response.message[symbol.uppercased()]!.quote

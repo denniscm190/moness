@@ -66,7 +66,7 @@ struct PortfolioRow: View {
     
     // Get quote data
     private func getQuote() {
-        let url = "https://api.simoleon.app/stock/\(company.symbol!)/quote"
+        let url = "https://api.moness.app/stock/\(company.symbol!)/quote"
         httpRequest(url: url, model: QuoteResponse.self) { response in
             quote = response.message
         }

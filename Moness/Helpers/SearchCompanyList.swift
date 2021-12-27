@@ -36,7 +36,7 @@ struct SearchCompanyList: View {
     
     // Get searched companies
     private func getSearch() {
-        let url = "https://api.simoleon.app/search/\(searchSymbol)"
+        let url = "https://api.moness.app/search/\(searchSymbol)"
         httpRequest(url: url, model: SearchCompanyResponse.self) { response in
             companies = response.message
         }
