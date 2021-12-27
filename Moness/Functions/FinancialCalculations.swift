@@ -30,7 +30,7 @@ struct AssetMethods {
             )
         }
         
-        sortedCompanies.sort { $0.pctProfitLoss > $1.profitLoss }
+        sortedCompanies.sort { $0.pctProfitLoss > $1.pctProfitLoss }
         
         return sortedCompanies
     }
