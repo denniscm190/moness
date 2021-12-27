@@ -22,7 +22,7 @@ struct SearchCompanyList: View {
                 }
             }
             .onChange(of: searchSymbol) { _ in getSearch()}
-            .searchable(text: $searchSymbol)
+            .searchable(text: $searchSymbol, placement: .navigationBarDrawer)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button(action: { dismiss() }) {

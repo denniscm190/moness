@@ -29,6 +29,8 @@ struct PersistenceController {
             portfolioCompany.exchange = "XNAS"
             portfolioCompany.sector = "Manufacturing"
             portfolioCompany.currency = "USD"
+            portfolioCompany.purchasePrice = 120.30
+            portfolioCompany.amount = 100
         }
         do {
             try viewContext.save()

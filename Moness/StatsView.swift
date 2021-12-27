@@ -44,6 +44,8 @@ struct StatsView: View {
                             }
                         }
                         .padding(.horizontal)
+                    } else {
+                        ProgressView()
                     }
                 }
                 .onAppear {

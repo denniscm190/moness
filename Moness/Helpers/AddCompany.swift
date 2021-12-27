@@ -17,21 +17,31 @@ struct AddCompany: View {
     
     var body: some View {
         Form {
+            
+            let numberFormatter: NumberFormatter = {
+                let formatter = NumberFormatter()
+                formatter.numberStyle = .decimal
+                
+                return formatter
+            }()
+            
             Section(header: Text("Add the purchase price")) {
-                TextField("Purchase price", value: $purchasePrice, format: .number)
+                TextField("Purchase price", value: $purchasePrice, formatter: numberFormatter)
                     .keyboardType(.decimalPad)
             }
             
             Section(header: Text("Add the purchase amount")) {
-                TextField("Purchase amount", value: $amount, format: .number)
+                TextField("Purchase amount", value: $amount, formatter: numberFormatter)
                     .keyboardType(.decimalPad)
             }
         }
         .toolbar {
             ToolbarItem(placement: .confirmationAction) {
-                Button("Done") {
-                    add()
-                    dismiss()
+                if purchasePrice != 0 && amount != 0 {
+                    Button("Done") {
+                        add()
+                        dismiss()
+                    }
                 }
             }
         }

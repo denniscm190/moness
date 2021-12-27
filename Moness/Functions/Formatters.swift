@@ -12,6 +12,7 @@ func formatToCurrency(amount: Float, with currencyCode: String) -> String {
     let formatter = NumberFormatter()
     formatter.numberStyle = .currency
     formatter.currencyCode = currencyCode
+    formatter.locale = Locale(identifier: "en_US")
     
     return formatter.string(from: NSNumber(value: amount)) ?? "\(amount) \(currencyCode)"
 }

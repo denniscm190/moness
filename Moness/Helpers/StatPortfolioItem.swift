@@ -12,7 +12,7 @@ struct StatPortfolioItem: View {
     
     var body: some View {
         RoundedRectangle(cornerRadius: 15)
-            .frame(height: 200)
+            .frame(height: 150)
             .foregroundColor(stat.color)
             .opacity(0.1)
             .overlay(
@@ -22,8 +22,9 @@ struct StatPortfolioItem: View {
                         .foregroundColor(.secondary)
                     
                     Text("\(formatToCurrency(amount: stat.value, with: "USD"))")
-                        .font(.title)
+                        .font(.title2)
                         .fontWeight(.semibold)
+                        .lineLimit(1)
                     
                     HStack {
                         if stat.pctValue >= 0 {
