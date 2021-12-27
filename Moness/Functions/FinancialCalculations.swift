@@ -11,47 +11,31 @@ import SwiftUI
 struct AssetMethods {
     // Extract asset from portfolio given a condition
 
-    func getMostProfitableAsset(from companies: FetchedResults<PortfolioCompany>, given quotes: [String: QuoteResult]) -> AssetResult {
-        let sortedCompanies = companies.sorted {
-            (quotes[$0.symbol!]!.latestPrice - $0.purchasePrice) * $0.amount / ($0.purchasePrice * $0.amount) > (
-                quotes[$0.symbol!]!.latestPrice - $1.purchasePrice) * $1.amount / ($1.purchasePrice * $1.amount)
+    func getSortedCompanies(from companies: FetchedResults<PortfolioCompany>, given quotes: [String: QuoteResult]) -> [AssetResult] {
+        var sortedCompanies = [AssetResult]()
+        for company in companies {
+            let latestPrice = quotes[company.symbol!]!.latestPrice
+            let profitLoss = (latestPrice - company.purchasePrice) * company.amount
+            let pctProfitLoss = profitLoss / (company.purchasePrice * company.amount)
+            
+            sortedCompanies.append(
+                AssetResult(
+                    methodName: company.securityName ?? "-",
+                    color: Color(.secondarySystemBackground),
+                    symbol: company.symbol!,
+                    profitLoss: profitLoss,
+                    pctProfitLoss: pctProfitLoss,
+                    currencySymbol: company.currency ?? ""
+                )
+            )
         }
         
-        let company = sortedCompanies.first!
-        let profitLoss = (quotes[company.symbol!]!.latestPrice - company.purchasePrice) * company.amount
-        let pctProfitLoss = profitLoss / (company.purchasePrice * company.amount)
+        sortedCompanies.sort { $0.pctProfitLoss > $1.profitLoss }
         
-        return AssetResult(
-            methodName: "Best",
-            color: .green,
-            symbol: company.symbol!,
-            profitLoss: profitLoss,
-            pctProfitLoss: pctProfitLoss,
-            currencySymbol: company.currency ?? ""
-        )
+        return sortedCompanies
     }
     
-    func getLessProfitableAsset(from companies: FetchedResults<PortfolioCompany>, given quotes: [String: QuoteResult]) -> AssetResult {
-        let sortedCompanies = companies.sorted {
-            (quotes[$0.symbol!]!.latestPrice - $0.purchasePrice) * $0.amount / ($0.purchasePrice * $0.amount) < (
-                quotes[$0.symbol!]!.latestPrice - $1.purchasePrice) * $1.amount / ($1.purchasePrice * $1.amount)
-        }
-        
-        let company = sortedCompanies.first!
-        let profitLoss = (quotes[company.symbol!]!.latestPrice - company.purchasePrice) * company.amount
-        let pctProfitLoss = profitLoss / (company.purchasePrice * company.amount)
-        
-        return AssetResult(
-            methodName: "Worst",
-            color: .red,
-            symbol: company.symbol!,
-            profitLoss: profitLoss,
-            pctProfitLoss: pctProfitLoss,
-            currencySymbol: company.currency ?? ""
-        )
-    }
-    
-    struct AssetResult {
+    struct AssetResult: Hashable {
         var methodName: String
         var color: Color
         var symbol: String
@@ -104,13 +88,3 @@ struct StatsMethods {
         var highSymbol: String
     }
 }
-
-// HELPERS (Supply functions above)
-// MARK: - Get average cost per share
-/*
- 
-*/
-func getAverageCostPerShare(with symbol: String) {
-    
-}
-

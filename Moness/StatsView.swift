@@ -29,7 +29,7 @@ struct StatsView: View {
             } else {
                 ScrollView {
                     if showingStats {
-                        VStack(spacing: 20) {
+                        VStack(spacing: 10) {
                             HStack {
                                 let marketValue = statsMethods.getMarketValue(from: companies, given: quotes)
                                 StatPortfolioItem(stat: marketValue)
@@ -38,12 +38,9 @@ struct StatsView: View {
                                 StatPortfolioItem(stat: roi)
                             }
 
-                            HStack {
-                                let bestAsset = assetMethods.getMostProfitableAsset(from: companies, given: quotes)
-                                StatAssetItem(asset: bestAsset)
-                                
-                                let worstAsset = assetMethods.getLessProfitableAsset(from: companies, given: quotes)
-                                StatAssetItem(asset: worstAsset)
+                            let sortedCompanies = assetMethods.getSortedCompanies(from: companies, given: quotes)
+                            ForEach(sortedCompanies, id: \.self) { asset in
+                                StatAssetRow(asset: asset)
                             }
                         }
                         .padding(.horizontal)

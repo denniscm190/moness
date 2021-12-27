@@ -20,6 +20,7 @@ func formatToCurrency(amount: Float, with currencyCode: String) -> String {
 func formatToPercent(amount: Float) -> String {
     let formatter = NumberFormatter()
     formatter.numberStyle = .percent
+    formatter.maximumFractionDigits = 2
     
     return formatter.string(from: NSNumber(value: amount))!
 }
