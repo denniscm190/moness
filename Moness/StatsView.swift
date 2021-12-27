@@ -29,7 +29,7 @@ struct StatsView: View {
             } else {
                 ScrollView {
                     if showingStats {
-                        VStack(spacing: 10) {
+                        VStack(alignment:.leading, spacing: 10) {
                             HStack {
                                 let marketValue = statsMethods.getMarketValue(from: companies, given: quotes)
                                 StatPortfolioItem(stat: marketValue)
@@ -37,7 +37,12 @@ struct StatsView: View {
                                 let roi = statsMethods.getRoi(from: companies, given: quotes)
                                 StatPortfolioItem(stat: roi)
                             }
-
+                            
+                            Text("Most profitable assets")
+                                .font(.title)
+                                .fontWeight(.semibold)
+                                .padding(.top)
+                            
                             let sortedCompanies = assetMethods.getSortedCompanies(from: companies, given: quotes)
                             ForEach(sortedCompanies, id: \.self) { asset in
                                 StatAssetRow(asset: asset)
@@ -85,5 +90,6 @@ struct StatsView: View {
 struct StatsView_Previews: PreviewProvider {
     static var previews: some View {
         StatsView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
